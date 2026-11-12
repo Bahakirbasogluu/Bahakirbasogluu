@@ -8,16 +8,15 @@ I build LLM-agent and document-intelligence systems for enterprise clients in ba
 
 Client code lives in private repositories. These are the engagements I can describe.
 
-| Client | Sector | What I built | Outcome |
-| --- | --- | --- | --- |
-| Nexent Bank | Banking | KYC onboarding agent on Copilot Studio and Azure AI Foundry. It researches internal policy and completes the eligibility workbook from the documents a client uploads. The same pattern was then applied to credit risk analysis. | Replaced a process that took 2 to 3 weeks per client. Now the relationship managers' standard onboarding workflow. |
-| Enerjisa | Energy | Document-processing pipeline that reads 26 document types (invoices, notarial deeds, insurance policies and others) and posts the extracted data to SAP through a custom MCP server. | The accounting team's standard workflow. Staff review output instead of keying in data. |
-| CEVA Logistics | Logistics | E-mail-to-order agent that reads free-form shipment requests, extracts order fields against Pydantic schemas, matches the customer, follows up on missing details and returns the quote. | Does the work of one full-time coordinator (about 8 hours a day). The role moved to review. |
-| CEVA Logistics | Logistics | Generative-AI OCR pipeline for trip documents across 19 customer-specific templates, on Azure AI Document Intelligence and Azure OpenAI, deployed as serverless Azure Functions through Azure DevOps. | Processes about 120,000 documents a month. |
-| SASA Polyester | Manufacturing | WhatsApp agent that answers business questions in natural language by querying Power BI directly. | Users get reporting figures without opening a dashboard. |
-| ZF Friedrichshafen | Automotive | Anomaly detection models for manufacturing quality processes, with SHAP and LIME layers that show engineers why a part was flagged. Delivered while at NTT DATA Business Solutions. | 98 to 99% accuracy on live production data, maintained through continuous retraining. |
+**Nexent Bank (banking).** KYC onboarding agent on Copilot Studio and Azure AI Foundry. It researches internal policy and completes the eligibility workbook from the documents a client uploads, replacing a process that took 2 to 3 weeks per client. It is now the relationship managers' standard onboarding workflow, and the same pattern was applied to credit risk analysis.
 
-At PEAKUP I also designed an internal multi-agent system for technical documentation support (classification, summarization, retrieval).
+**Enerjisa (energy).** Document-processing pipeline that reads 26 document types, including invoices, notarial deeds and insurance policies, and posts the extracted data to SAP through a custom MCP server. The accounting team now reviews output instead of keying in data.
+
+**CEVA Logistics (logistics).** Two systems, both now standard in the logistics operations unit. An e-mail-to-order agent reads free-form shipment requests, extracts order fields against Pydantic schemas, matches the customer, follows up on missing details and returns the quote; it does the work of one full-time coordinator, about 8 hours a day. A generative-AI OCR pipeline processes about 120,000 trip documents a month across 19 customer-specific templates, on Azure AI Document Intelligence and Azure OpenAI, deployed as serverless Azure Functions.
+
+**SASA Polyester (manufacturing).** WhatsApp agent that answers business questions in natural language by querying Power BI directly, so users get reporting figures without opening a dashboard.
+
+**ZF Friedrichshafen (automotive).** Anomaly detection models for manufacturing quality processes, with SHAP and LIME layers that show engineers why a part was flagged. They held 98 to 99% accuracy on live production data through continuous retraining. Delivered while at NTT DATA Business Solutions.
 
 ## Teaching and training
 
@@ -52,24 +51,16 @@ The older repositories on this profile are coursework from my undergraduate year
 
 ## Toolbox
 
-- **LLM and agentic AI:** Azure OpenAI, Microsoft Copilot Studio, Azure AI Foundry, LangChain and LangGraph, custom MCP servers, RAG, vector databases, multi-agent orchestration
-- **ML, vision and explainability:** PyTorch, TensorFlow, scikit-learn, Hugging Face, LoRA fine-tuning, nnU-Net, YOLO, OpenCV, Azure AI Document Intelligence, SHAP, LIME, uncertainty quantification
-- **Cloud and MLOps:** Azure Machine Learning, Azure Functions, Azure AI Search, Azure DevOps, Docker, FastAPI, Redis, Power Platform
-- **Languages and data:** Python, SQL, PostgreSQL, Pandas, NumPy, Pydantic
+**LLM and agents:** Azure OpenAI, Copilot Studio, Azure AI Foundry, LangChain and LangGraph, custom MCP servers, RAG, multi-agent orchestration.
 
-## Experience
+**ML and cloud:** PyTorch, scikit-learn, Hugging Face, nnU-Net, Azure AI Document Intelligence, SHAP and LIME, Azure Functions, Azure Machine Learning, Azure DevOps, Docker, FastAPI.
 
-- **AI Engineer, PEAKUP** (Aug 2025 to present). End-to-end client AI engagements: scoping, build, production rollout, and handover with runbooks, architecture documentation and team training.
-- **AI Engineer, ONO Teknoloji** (May to Aug 2025). Demand forecasting and multi-agent chatbot solutions, including SQL data modelling from raw source systems.
-- **Data Scientist, NTT DATA Business Solutions** (Jun 2024 to May 2025). Document translation and chatbot solutions on Azure AI services for Mercedes-Benz Türk, Pegasus and KoçZer, with deployment automated through Azure Machine Learning and Azure Pipelines.
-- **Earlier:** AI engineering intern at Selvi Technology (2023); internships at Turkish Aerospace (2021 to 2022) and Bekaert İzmit Çelik Kord (2022); Microsoft Turkey student programme (2022 to 2023).
-
-## Education and certification
+## Background
 
 - MSc Computer Engineering, Istanbul Technical University (2025 to January 2027, expected)
 - BSc Artificial Intelligence Engineering, Hacettepe University (2019 to 2024)
 - Microsoft Certified: Azure AI Engineer Associate
-- Languages: Turkish (native), English (professional working proficiency), German (A2)
+- Before PEAKUP: Data Scientist at NTT DATA Business Solutions, AI Engineer at ONO Teknoloji
 
 ## Writing and speaking
 

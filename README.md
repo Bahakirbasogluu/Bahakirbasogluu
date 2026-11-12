@@ -20,14 +20,15 @@ Client code lives in private repositories. These are the engagements I can descr
 
 ## Teaching and training
 
-**Corporate AI training.** More than 20 days of in-person training on AI agents and Microsoft Copilot Studio for Eczacıbaşı (7 days), KPMG (6), Petroyağ (4) and Hedef Filo (3), plus online programmes for MetLife, TAV and Enerjisa. Sessions run in Turkish or English and are adapted to the audience's sector and departments.
+**Corporate AI training.** More than 100 days of training for over 1,000 participants at Eczacıbaşı, TAV, MetLife, Nexent Bank, CEVA Logistics, Hedef Filo, KPMG, Centurion, Petroyağ and Brisa. Sessions run in Turkish or English, in person or online, and are adapted to the audience's sector and departments.
 
 | Programme | Audience | Content |
 | --- | --- | --- |
-| AI 101 | All employees, half or full day | How generative AI works, what it can and cannot do, prompting, responsible use, department scenarios |
+| AI 101 | All employees, half or full day | The history of AI up to transformer architectures, how generative AI works and where it fails, prompt engineering, responsible use, department scenarios |
 | Microsoft 365 Copilot | Business departments | Copilot in daily work by department: finance, HR, sales, operations, legal, IT |
-| Copilot Studio and agent building | Power users and IT | Designing, grounding and publishing agents; hands-on labs with test questions and a prompt-injection demo |
-| Technical track | Developers | Azure AI services and AI-assisted development (vibe coding) |
+| Copilot Studio | Power users and IT | Designing, grounding and publishing agents; hands-on labs with test questions and a prompt-injection demo |
+| Azure AI Foundry | Developers and data teams | Building and deploying models and agents on Azure AI Foundry |
+| GitHub Copilot and vibe coding | Developers | AI-assisted development with GitHub Copilot, from prompt to working application |
 
 **University teaching.** Adjunct instructor in PEAKUP's Sektör Kampüste programme since 2025, now in its third semester. I teach AI courses at Süleyman Demirel University, Okan University and Kocaeli Health and Technology University: syllabus and exam design, lectures, student projects and grading.
 

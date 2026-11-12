@@ -8,13 +8,25 @@ I build LLM-agent and document-intelligence systems for enterprise clients in ba
 
 Client code lives in private repositories. These are the engagements I can describe.
 
-**Nexent Bank (banking).** KYC onboarding agent on Copilot Studio and Azure AI Foundry. It researches internal policy and completes the eligibility workbook from the documents a client uploads, replacing a process that took 2 to 3 weeks per client. It is now the relationship managers' standard onboarding workflow, and the same pattern was applied to credit risk analysis.
+**Nexent Bank (banking).** Three systems for a Swiss bank.
+
+- *KYC onboarding agent* on Copilot Studio and Azure AI Foundry. It researches internal policy and completes the eligibility workbook from the documents a client uploads, answer by answer with its source, replacing a process that took 2 to 3 weeks per client. It is now the relationship managers' standard onboarding workflow.
+- *Credit risk platform.* Analysts import a borrower's evidence and run versioned teams of agents over it under supervision; the output is a credit memo and workbook that passes a four-eyes review. Built on FastAPI and React, with LangGraph and a Postgres checkpointer, Azure Service Bus and Container Apps.
+- *News-watch agent*, live since August 2026. Every hour it scans the press for the companies on the bank's watch-list and sends one deduplicated digest, or nothing when there is nothing new. In its measured period it did not miss a scheduled hour, filtered out 92% of 4,373 candidate articles before they reached anyone, and scanned 100 clients in 80 seconds. The same engine is exposed to Copilot Studio as an MCP server.
 
 **Enerjisa (energy).** Document-processing pipeline that reads 26 document types, including invoices, notarial deeds and insurance policies, and posts the extracted data to SAP through a custom MCP server. The accounting team now reviews output instead of keying in data.
 
 **CEVA Logistics (logistics).** Two systems, both now standard in the logistics operations unit. An e-mail-to-order agent reads free-form shipment requests, extracts order fields against Pydantic schemas, matches the customer, follows up on missing details and returns the quote; it does the work of one full-time coordinator, about 8 hours a day. A generative-AI OCR pipeline processes about 120,000 trip documents a month across 19 customer-specific templates, on Azure AI Document Intelligence and Azure OpenAI, deployed as serverless Azure Functions.
 
 **SASA Polyester (manufacturing).** WhatsApp agent that answers business questions in natural language by querying Power BI directly, so users get reporting figures without opening a dashboard.
+
+**Flormar (cosmetics).** Corporate knowledge assistant on Copilot Studio over 12 SharePoint sources and about 136 documents, mostly HR. It routes each question to the right source, applies date rules to answer from the current version of a document, and hands sensitive topics to HR.
+
+**A hospital group (healthcare).** Proof of concept for a permission-aware RAG assistant embedded in the intranet. It answers only from the documents the signed-in user is allowed to see and cites its sources. FastAPI, a React widget, Azure AI Search with hybrid retrieval and Azure AI Foundry.
+
+**Kansai Altan (paints).** Azure migration of three internal business applications to App Service for Containers with GitHub Actions, and the engineering standards they now share: naming, CI/CD and branching.
+
+**PEAKUP (internal).** A sector-neutral case-agent platform that generalises the credit risk work: versioned agents and workflows, MCP connections, golden-case evaluations and sector packs for banking, logistics and pharma, installed in each customer's own tenant.
 
 **ZF Friedrichshafen (automotive).** Anomaly detection models for manufacturing quality processes, with SHAP and LIME layers that show engineers why a part was flagged. They held 98 to 99% accuracy on live production data through continuous retraining. Delivered while at NTT DATA Business Solutions.
 
@@ -65,7 +77,8 @@ The older repositories on this profile are coursework from my undergraduate year
 - MSc Computer Engineering, Istanbul Technical University (2025 to January 2027, expected)
 - BSc Artificial Intelligence Engineering, Hacettepe University (2019 to 2024)
 - Microsoft Certified: Azure AI Engineer Associate
-- Before PEAKUP: Data Scientist at NTT DATA Business Solutions, AI Engineer at ONO Teknoloji
+- Before PEAKUP: AI Engineer at ONO Teknoloji, building LLM-based chatbots and the software around them
+- Data Scientist at NTT DATA Business Solutions: anomaly detection at ZF, and LLM chatbot and agentic proofs of concept for BMW and Nobel
 
 ## Writing and speaking
 

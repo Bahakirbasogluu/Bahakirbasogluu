@@ -2,7 +2,7 @@
 
 AI Engineer at [PEAKUP](https://peakup.org), Türkiye's first and only Microsoft Frontier Partner, and MSc candidate in Computer Engineering at Istanbul Technical University.
 
-I build LLM-agent and document-intelligence systems for enterprise clients in banking, energy, logistics and manufacturing, and take them from scoping to production and handover. Alongside delivery I teach: university AI courses as an adjunct instructor, and corporate AI training in Turkish and English.
+I build agentic systems for enterprise clients in banking, energy, logistics and manufacturing: multi-agent orchestration, document pipelines and the tool and review layers around them. I take them from scoping to production and handover. Alongside delivery I teach: university AI courses as an adjunct instructor, and corporate AI training in Turkish and English.
 
 ## Client work
 
@@ -10,23 +10,27 @@ Client code lives in private repositories. These are the engagements I can descr
 
 **Nexent Bank (banking).** Three systems for a Swiss bank.
 
-- *KYC onboarding agent* on Copilot Studio and Azure AI Foundry. It researches internal policy and completes the eligibility workbook from the documents a client uploads, answer by answer with its source, replacing a process that took 2 to 3 weeks per client. It is now the relationship managers' standard onboarding workflow.
-- *Credit risk platform.* Analysts import a borrower's evidence and run versioned teams of agents over it under supervision; the output is a credit memo and workbook that passes a four-eyes review. Built on FastAPI and React, with LangGraph and a Postgres checkpointer, Azure Service Bus and Container Apps.
-- *News-watch agent*, live since August 2026. Every hour it scans the press for the companies on the bank's watch-list and sends one deduplicated digest, or nothing when there is nothing new. In its measured period it did not miss a scheduled hour, filtered out 92% of 4,373 candidate articles before they reached anyone, and scanned 100 clients in 80 seconds. The same engine is exposed to Copilot Studio as an MCP server.
+- *KYC onboarding assistant*, built with Microsoft Agent Framework on Azure AI Foundry behind a FastAPI and React application. A code-owned phase machine takes the relationship manager through the eligibility workbook in batches. For each batch the agent proposes the answers with an evidence class, a confidence and the source documents; the manager confirms or corrects; the confirmed answers are then written into the bank's own workbook in one guarded pass with an audit sheet. It replaces a process that took 2 to 3 weeks per client.
+- *Credit risk platform.* Workflows are data: published definitions are compiled into a LangGraph graph in which evidence, financial and policy analysts, a researcher, a synthesizer and a quality reviewer exchange results through typed ports, with bounded fan-out, a bounded review loop and a human interrupt for four-eyes approval. A run pins the version of every agent and workflow it uses and resumes from Postgres checkpoints; work is dispatched through Azure Service Bus to workers on Container Apps.
+- *News-watch agent*, live since August 2026. Every hour it scans the press for the companies on the bank's watch-list and sends one deduplicated digest, or nothing when there is nothing new. The model only judges articles that were already fetched and must quote its evidence. In its measured week it did not miss a scheduled hour and its deterministic filters removed 92% of 4,373 candidate articles; a load test scanned 100 watch-list entries in 80 seconds. The same engine is exposed to Copilot Studio as an MCP server.
 
-**Enerjisa (energy).** Document-processing pipeline that reads 26 document types, including invoices, notarial deeds and insurance policies, and posts the extracted data to SAP through a custom MCP server. The accounting team now reviews output instead of keying in data.
+**Enerjisa (energy).** Document-processing service for 15 document types, among them notary and legal fees, customs and import documents, insurance policies and utility bills. Each document goes through OCR, classification, type-specific extraction with structured outputs, deterministic validation and mapping to SAP-ready records, which the client's RPA posts to SAP, so that the accounting team reviews output instead of keying in data.
 
-**CEVA Logistics (logistics).** Two systems, both now standard in the logistics operations unit. An e-mail-to-order agent reads free-form shipment requests, extracts order fields against Pydantic schemas, matches the customer, follows up on missing details and returns the quote; it does the work of one full-time coordinator, about 8 hours a day. A generative-AI OCR pipeline processes about 120,000 trip documents a month across 19 customer-specific templates, on Azure AI Document Intelligence and Azure OpenAI, deployed as serverless Azure Functions.
+**CEVA Logistics (logistics).** Several systems in production in the logistics operation.
+
+- *E-mail-to-order agent.* It reads free-form shipment requests, extracts the order fields, identifies the customer from the tax number and sender, replies with the details that are missing and relays the quote from the pricing system; it does the work of one full-time coordinator, about 8 hours a day.
+- *Trip-document OCR pipeline.* It processes 110,000 to 120,000 documents a month with 19 extraction templates, 4 for general document types and 15 customer-specific, each with its own Pydantic schema, on Azure AI Document Intelligence and Azure OpenAI, running as containerised Azure Functions.
+- *WhatsApp agents* built as LangGraph state machines. One verifies the customer and collects a shipment request through an order sub-graph, then relays the quote. The other routes customer-service requests through a dispatcher to step-by-step sub-agents that call the transport system's API.
 
 **SASA Polyester (manufacturing).** WhatsApp agent that answers business questions in natural language by querying Power BI directly, so users get reporting figures without opening a dashboard.
 
 **Flormar (cosmetics).** Corporate knowledge assistant on Copilot Studio over 12 SharePoint sources and about 136 documents, mostly HR. It routes each question to the right source, applies date rules to answer from the current version of a document, and hands sensitive topics to HR.
 
-**A hospital group (healthcare).** Proof of concept for a permission-aware RAG assistant embedded in the intranet. It answers only from the documents the signed-in user is allowed to see and cites its sources. FastAPI, a React widget, Azure AI Search with hybrid retrieval and Azure AI Foundry.
+**A hospital group (healthcare).** Proof of concept for a permission-aware RAG assistant embedded in the intranet. Access groups are stamped on every chunk at indexing time and every query carries a security filter, so the model only ever receives documents the signed-in user may see; answers cite their sources. FastAPI, a React widget, Azure AI Search with hybrid retrieval and Azure AI Foundry.
 
-**Kansai Altan (paints).** Azure migration of three internal business applications to App Service for Containers with GitHub Actions, and the engineering standards they now share: naming, CI/CD and branching.
+**Kansai Altan (paints).** Containerised three internal business applications for Azure App Service with GitHub Actions pipelines, and wrote the engineering standards they now share: naming, CI/CD and branching.
 
-**PEAKUP (internal).** A sector-neutral case-agent platform that generalises the credit risk work: versioned agents and workflows, MCP connections, golden-case evaluations and sector packs for banking, logistics and pharma, installed in each customer's own tenant.
+**PEAKUP (internal).** A sector-neutral case-agent platform that generalises the credit risk work: versioned agents and workflows, gated MCP tool connections, golden-case evaluations that block a release on regression, and sector packs for banking, logistics and pharma. It is designed to be installed in each customer's own tenant.
 
 **ZF Friedrichshafen (automotive).** Anomaly detection models for manufacturing quality processes, with SHAP and LIME layers that show engineers why a part was flagged. They held 98 to 99% accuracy on live production data through continuous retraining. Delivered while at NTT DATA Business Solutions.
 

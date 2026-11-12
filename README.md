@@ -43,6 +43,9 @@ MSc thesis at Istanbul Technical University: uncertainty-aware, explainable whol
 | Project | What it is |
 | --- | --- |
 | [document-extraction-pipeline](https://github.com/Bahakirbasogluu/document-extraction-pipeline) | Schema-driven document extraction: split, classify, extract into Pydantic schemas, validate against business rules and map to a downstream record. Runs offline on synthetic documents, with an Azure OpenAI backend. |
+| [erp-mcp-server](https://github.com/Bahakirbasogluu/erp-mcp-server) | MCP server that gives agents guarded access to an ERP REST API: typed tools, two-step confirmed writes, idempotent posting and errors that say what to do next. Includes a mock ERP. |
+| [email-to-order-agent](https://github.com/Bahakirbasogluu/email-to-order-agent) | Agent workflow for an order mailbox: reads free-form shipment requests, asks for missing details, prices from a rate card and hands over to a person when it should not decide. |
+| [lesion-level-eval](https://github.com/Bahakirbasogluu/lesion-level-eval) | Lesion-level evaluation of 3D segmentation masks: detection by lesion size, false positives per study and patient-cluster bootstrap intervals. The evaluation method behind my thesis, on synthetic data. |
 | [Fraud-Detection](https://github.com/Bahakirbasogluu/Fraud-Detection) | One-class anomaly detectors (OCSVM, GMM, Isolation Forest, LOF) and score ensembles (voting, stacking) for fraud detection on credit card and Medicare data. |
 | [Fraud-Detection-GT](https://github.com/Bahakirbasogluu/Fraud-Detection-GT) | The graph-based companion study on the same datasets: centrality and community analysis, spectral methods, and GNNs (GCN, GraphSAGE, GAT, DOMINANT). |
 | [IMPBA](https://github.com/Bahakirbasogluu/IMPBA) | Image inpainting for object removal with two U-Net variants, comparing MSE and VGG19 perceptual loss; evaluated with PSNR, SSIM and LPIPS. |

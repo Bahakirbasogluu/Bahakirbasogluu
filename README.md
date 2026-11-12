@@ -58,6 +58,10 @@ MSc thesis at Istanbul Technical University: uncertainty-aware, explainable whol
 
 | Project | What it is |
 | --- | --- |
+| [agent-workflow-orchestrator](https://github.com/Bahakirbasogluu/agent-workflow-orchestrator) | Multi-agent workflows as data: published definitions compiled to a LangGraph graph, with typed ports between agents, human review as a durable interrupt, pinned versions and golden-case evaluation. |
+| [news-watch-agent](https://github.com/Bahakirbasogluu/news-watch-agent) | News-watch agent that scans the press for a watch-list and sends one deduplicated digest: evidence-checked matching, database-enforced deduplication, self-healing delivery and an MCP bridge for other orchestrators. |
+| [workbook-review-agent](https://github.com/Bahakirbasogluu/workbook-review-agent) | Agent that pre-fills a review workbook from evidence documents, batch by batch, with a person confirming every answer and a guarded write into the Excel template. |
+| [permission-aware-rag](https://github.com/Bahakirbasogluu/permission-aware-rag) | RAG assistant for documents not everyone may read: access groups on every chunk, a security filter on every query and an evaluation that counts leaks. |
 | [document-extraction-pipeline](https://github.com/Bahakirbasogluu/document-extraction-pipeline) | Schema-driven document extraction: split, classify, extract into Pydantic schemas, validate against business rules and map to a downstream record. Runs offline on synthetic documents, with an Azure OpenAI backend. |
 | [erp-mcp-server](https://github.com/Bahakirbasogluu/erp-mcp-server) | MCP server that gives agents guarded access to an ERP REST API: typed tools, two-step confirmed writes, idempotent posting and errors that say what to do next. Includes a mock ERP. |
 | [email-to-order-agent](https://github.com/Bahakirbasogluu/email-to-order-agent) | Agent workflow for an order mailbox: reads free-form shipment requests, asks for missing details, prices from a rate card and hands over to a person when it should not decide. |
@@ -72,7 +76,7 @@ The older repositories on this profile are coursework from my undergraduate year
 
 ## Toolbox
 
-**LLM and agents:** Azure OpenAI, Copilot Studio, Azure AI Foundry, LangChain and LangGraph, custom MCP servers, RAG, multi-agent orchestration.
+**Agents and orchestration:** LangGraph, Microsoft Agent Framework, Copilot Studio, Azure AI Foundry, Azure OpenAI, MCP servers and tool gating, human-in-the-loop review, RAG with access control, golden-case evaluation.
 
 **ML and cloud:** PyTorch, scikit-learn, Hugging Face, nnU-Net, Azure AI Document Intelligence, SHAP and LIME, Azure Functions, Azure Machine Learning, Azure DevOps, Docker, FastAPI.
 

@@ -30,7 +30,7 @@ Client code lives in private repositories. These are the engagements I can descr
 | Azure AI Foundry | Developers and data teams | Building and deploying models and agents on Azure AI Foundry |
 | GitHub Copilot and vibe coding | Developers | AI-assisted development with GitHub Copilot, from prompt to working application |
 
-**University teaching.** Adjunct instructor in PEAKUP's Sektör Kampüste programme since 2025, now in its third semester. I teach AI courses at Süleyman Demirel University, Okan University and Kocaeli Health and Technology University: syllabus and exam design, lectures, student projects and grading.
+**University teaching.** Adjunct instructor in PEAKUP's Sektör Kampüste programme since 2025, now in its third semester. I teach AI courses at Süleyman Demirel University, Okan University, Kocaeli Health and Technology University and Atatürk University: syllabus and exam design, lectures, student projects and grading.
 
 ## Research
 
@@ -42,6 +42,7 @@ MSc thesis at Istanbul Technical University: uncertainty-aware, explainable whol
 
 | Project | What it is |
 | --- | --- |
+| [document-extraction-pipeline](https://github.com/Bahakirbasogluu/document-extraction-pipeline) | Schema-driven document extraction: split, classify, extract into Pydantic schemas, validate against business rules and map to a downstream record. Runs offline on synthetic documents, with an Azure OpenAI backend. |
 | [Fraud-Detection](https://github.com/Bahakirbasogluu/Fraud-Detection) | One-class anomaly detectors (OCSVM, GMM, Isolation Forest, LOF) and score ensembles (voting, stacking) for fraud detection on credit card and Medicare data. |
 | [Fraud-Detection-GT](https://github.com/Bahakirbasogluu/Fraud-Detection-GT) | The graph-based companion study on the same datasets: centrality and community analysis, spectral methods, and GNNs (GCN, GraphSAGE, GAT, DOMINANT). |
 | [IMPBA](https://github.com/Bahakirbasogluu/IMPBA) | Image inpainting for object removal with two U-Net variants, comparing MSE and VGG19 perceptual loss; evaluated with PSNR, SSIM and LPIPS. |

@@ -86,7 +86,7 @@ The older repositories on this profile are coursework from my undergraduate year
 - BSc Artificial Intelligence Engineering, Hacettepe University (2019 to 2024)
 - Microsoft Certified: Azure AI Engineer Associate
 - Before PEAKUP: AI Engineer at ONO Teknoloji, building LLM-based chatbots and the software around them
-- Data Scientist at NTT DATA Business Solutions: anomaly detection at ZF, and LLM chatbot and agentic proofs of concept for BMW and Nobel
+- Data Scientist at NTT DATA Business Solutions: anomaly detection at ZF, document translation and chatbot solutions on Azure AI for Mercedes-Benz Türk, Pegasus and KoçZer, and LLM chatbot and agentic proofs of concept for BMW and Nobel
 
 ## Writing and speaking
 

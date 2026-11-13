@@ -30,7 +30,7 @@ Client code lives in private repositories. These are the engagements I can descr
 
 **Kansai Altan (paints).** Containerised three internal business applications for Azure App Service with GitHub Actions, and wrote the engineering standards they share.
 
-**PEAKUP (internal).** A sector-neutral case-agent platform that generalises the credit risk work: versioned agents and workflows, gated MCP tool connections, golden-case evaluations and sector packs for banking, logistics and pharma.
+**PEAKUP (internal and R&D).** A sector-neutral case-agent platform that generalises the credit risk work: versioned agents and workflows, gated MCP tool connections, golden-case evaluations and sector packs for banking, logistics and pharma. And DocGen, a multi-agent system that turns technical-support conversations into documentation in English and Turkish; the paper is under review at Neural Computing and Applications.
 
 **ZF Friedrichshafen (automotive).** Anomaly detection for manufacturing quality, with SHAP and LIME layers that show engineers why a part was flagged; 98 to 99% accuracy on live production data through continuous retraining. Delivered while at NTT DATA Business Solutions.
 
@@ -54,7 +54,7 @@ MSc thesis at Istanbul Technical University: uncertainty-aware, explainable whol
 
 **Publication.** "Small-Lesion Detection in Whole-Body FDG PET/CT: A Lesion-Level Audit of Training and Post-Processing Trade-offs", first author, accepted at ISMSIT 2026.
 
-**Under review.** "DocGen: A Multilingual LLM-Orchestrated Framework for Automated Technical Support Documentation", Neural Computing and Applications, submitted June 2026.
+**Under review, from PEAKUP R&D.** "DocGen: A Multilingual LLM-Orchestrated Framework for Automated Technical Support Documentation", Neural Computing and Applications, submitted June 2026.
 
 ## Repositories
 

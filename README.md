@@ -10,29 +10,29 @@ Client code lives in private repositories. These are the engagements I can descr
 
 **Nexent Bank (banking).** Three systems for a Swiss bank.
 
-- *KYC onboarding assistant*, built with Microsoft Agent Framework on Azure AI Foundry behind a FastAPI and React application. A code-owned phase machine takes the relationship manager through the eligibility workbook in batches. For each batch the agent proposes the answers with an evidence class, a confidence and the source documents; the manager confirms or corrects; the confirmed answers are then written into the bank's own workbook in one guarded pass with an audit sheet. It replaces a process that took 2 to 3 weeks per client.
-- *Credit risk platform.* Workflows are data: published definitions are compiled into a LangGraph graph in which evidence, financial and policy analysts, a researcher, a synthesizer and a quality reviewer exchange results through typed ports, with bounded fan-out, a bounded review loop and a human interrupt for four-eyes approval. A run pins the version of every agent and workflow it uses and resumes from Postgres checkpoints; work is dispatched through Azure Service Bus to workers on Container Apps.
-- *News-watch agent*, live since August 2026. Every hour it scans the press for the companies on the bank's watch-list and sends one deduplicated digest, or nothing when there is nothing new. The model only judges articles that were already fetched and must quote its evidence. In its measured week it did not miss a scheduled hour and its deterministic filters removed 92% of 4,373 candidate articles; a load test scanned 100 watch-list entries in 80 seconds. The same engine is exposed to Copilot Studio as an MCP server.
+- *KYC onboarding assistant* on Microsoft Agent Framework and Azure AI Foundry. A code-owned phase machine takes the relationship manager through the eligibility workbook in batches: the agent proposes each answer with its evidence class and sources, the manager confirms or corrects, and the result is written into the bank's own workbook with an audit sheet. It replaces a process that took 2 to 3 weeks per client.
+- *Credit risk platform.* Published workflow definitions are compiled into a LangGraph graph in which analysts, a researcher, a synthesizer and a reviewer exchange results through typed ports, with bounded loops and a human interrupt for four-eyes approval. Runs pin the version of every agent they use and resume from Postgres checkpoints.
+- *News-watch agent*, live since August 2026. Every hour it scans the press for the bank's watch-list and sends one deduplicated digest, or nothing when there is nothing new. In its measured week it did not miss a scheduled hour and its filters removed 92% of 4,373 candidate articles. The engine is exposed to Copilot Studio as an MCP server.
 
-**Enerjisa (energy).** Document-processing service for 15 document types, among them notary and legal fees, customs and import documents, insurance policies and utility bills. Each document goes through OCR, classification, type-specific extraction with structured outputs, deterministic validation and mapping to SAP-ready records, which the client's RPA posts to SAP, so that the accounting team reviews output instead of keying in data.
+**Enerjisa (energy).** Document-processing service that reads 26 document types, among them notary and legal fees, customs documents, insurance policies and utility bills. Each document goes through OCR, classification, structured extraction, validation and mapping to SAP-ready records, so that the accounting team reviews output instead of keying in data.
 
 **CEVA Logistics (logistics).** Several systems in production in the logistics operation.
 
-- *E-mail-to-order agent.* It reads free-form shipment requests, extracts the order fields, identifies the customer from the tax number and sender, replies with the details that are missing and relays the quote from the pricing system; it does the work of one full-time coordinator, about 8 hours a day.
-- *Trip-document OCR pipeline.* It processes 110,000 to 120,000 documents a month with 19 extraction templates, 4 for general document types and 15 customer-specific, each with its own Pydantic schema, on Azure AI Document Intelligence and Azure OpenAI, running as containerised Azure Functions.
-- *WhatsApp agents* built as LangGraph state machines. One verifies the customer and collects a shipment request through an order sub-graph, then relays the quote. The other routes customer-service requests through a dispatcher to step-by-step sub-agents that call the transport system's API.
+- *E-mail-to-order agent.* It reads free-form shipment requests, extracts the order fields, identifies the customer, follows up on missing details and relays the quote. It does the work of one full-time coordinator, about 8 hours a day.
+- *Trip-document OCR pipeline.* 110,000 to 120,000 documents a month through 19 extraction templates, each with its own Pydantic schema, on Azure AI Document Intelligence and Azure OpenAI.
+- *WhatsApp agents* built as LangGraph state machines: one collects a shipment request through an order sub-graph, the other routes customer-service requests through a dispatcher to step-by-step sub-agents.
 
-**SASA Polyester (manufacturing).** WhatsApp agent that answers business questions in natural language by querying Power BI directly, so users get reporting figures without opening a dashboard.
+**SASA Polyester (manufacturing).** WhatsApp agent that answers business questions in natural language by querying Power BI directly.
 
-**Flormar (cosmetics).** Corporate knowledge assistant on Copilot Studio over 12 SharePoint sources and about 136 documents, mostly HR. It routes each question to the right source, applies date rules to answer from the current version of a document, and hands sensitive topics to HR.
+**Flormar (cosmetics).** Knowledge assistant on Copilot Studio over 12 SharePoint sources. It routes each question to the right source, answers from the current version of a document and hands sensitive topics to HR.
 
-**A hospital group (healthcare).** Proof of concept for a permission-aware RAG assistant embedded in the intranet. Access groups are stamped on every chunk at indexing time and every query carries a security filter, so the model only ever receives documents the signed-in user may see; answers cite their sources. FastAPI, a React widget, Azure AI Search with hybrid retrieval and Azure AI Foundry.
+**A hospital group (healthcare).** Proof of concept for a permission-aware RAG assistant in the intranet: access groups on every chunk and a security filter on every query, so the model only receives documents the signed-in user may see.
 
-**Kansai Altan (paints).** Containerised three internal business applications for Azure App Service with GitHub Actions pipelines, and wrote the engineering standards they now share: naming, CI/CD and branching.
+**Kansai Altan (paints).** Containerised three internal business applications for Azure App Service with GitHub Actions, and wrote the engineering standards they share.
 
-**PEAKUP (internal).** A sector-neutral case-agent platform that generalises the credit risk work: versioned agents and workflows, gated MCP tool connections, golden-case evaluations that block a release on regression, and sector packs for banking, logistics and pharma. It is designed to be installed in each customer's own tenant.
+**PEAKUP (internal).** A sector-neutral case-agent platform that generalises the credit risk work: versioned agents and workflows, gated MCP tool connections, golden-case evaluations and sector packs for banking, logistics and pharma.
 
-**ZF Friedrichshafen (automotive).** Anomaly detection models for manufacturing quality processes, with SHAP and LIME layers that show engineers why a part was flagged. They held 98 to 99% accuracy on live production data through continuous retraining. Delivered while at NTT DATA Business Solutions.
+**ZF Friedrichshafen (automotive).** Anomaly detection for manufacturing quality, with SHAP and LIME layers that show engineers why a part was flagged; 98 to 99% accuracy on live production data through continuous retraining. Delivered while at NTT DATA Business Solutions.
 
 ## Teaching and training
 
@@ -46,7 +46,7 @@ Client code lives in private repositories. These are the engagements I can descr
 | Azure AI Foundry | Developers and data teams | Building and deploying models and agents on Azure AI Foundry |
 | GitHub Copilot and vibe coding | Developers | AI-assisted development with GitHub Copilot, from prompt to working application |
 
-**University teaching.** Adjunct instructor in PEAKUP's Sektör Kampüste programme since 2025, now in its third semester. I teach AI courses at Süleyman Demirel University, Okan University, Kocaeli Health and Technology University and Atatürk University: syllabus and exam design, lectures, student projects and grading.
+**University teaching.** Adjunct instructor in PEAKUP's Sektör Kampüste programme since September 2025, now in its third semester. I teach AI courses at Kocaeli Health and Technology University, Okan University, Süleyman Demirel University and Atatürk University: syllabus and exam design, lectures, student projects and grading.
 
 ## Research
 

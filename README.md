@@ -54,6 +54,8 @@ MSc thesis at Istanbul Technical University: uncertainty-aware, explainable whol
 
 **Publication.** "Small-Lesion Detection in Whole-Body FDG PET/CT: A Lesion-Level Audit of Training and Post-Processing Trade-offs", first author, accepted at ISMSIT 2026.
 
+**Under review.** "DocGen: A Multilingual LLM-Orchestrated Framework for Automated Technical Support Documentation", Neural Computing and Applications, submitted June 2026.
+
 ## Repositories
 
 | Project | What it is |

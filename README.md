@@ -97,4 +97,4 @@ The older repositories on this profile are coursework from my undergraduate year
 
 ## Contact
 
-[Website](https://bahakirbasogluu.github.io) · [LinkedIn](https://www.linkedin.com/in/bahakirbasoglu) · [Medium](https://medium.com/@bahakirbashov) · [Kaggle](https://www.kaggle.com/bahakirbasoglu)
+[Website](https://bahakirbasoglu.com) · [LinkedIn](https://www.linkedin.com/in/bahakirbasoglu) · [Medium](https://medium.com/@bahakirbashov) · [Kaggle](https://www.kaggle.com/bahakirbasoglu)
